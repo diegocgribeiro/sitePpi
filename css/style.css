@@ -1,0 +1,194 @@
+/* Paleta de cores da clínica */
+:root {
+    --cor-principal: #0010f1; /* Azul primário */
+    --cor-secundaria: #f5f5f5; /* Verde de destaque */
+    --cor-texto-principal: #3a3a3a; /* Cinza escuro */
+    --cor-fundo-claro: #bdbdbd; /* Cinza claro para fundos */
+    --cor-branca: #FFFFFF;
+}
+
+section{
+    text-align: center; /* Centraliza o texto em seções */
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Uma fonte limpa e moderna */
+    line-height: 1.7; /* Melhor espaçamento entre linhas */
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-fundo-claro);
+    background-image: url("../images/clinica.png");
+    background-size: cover; /* Cobre todo o fundo */
+    background-attachment: fixed;
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-blend-mode: overlay; /* Combina a imagem com uma cor de fundo */
+}
+
+
+.header-clinica {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);    
+}
+
+h3 {
+    font-size: 1rem;
+    padding: 0 1.5rem; /* Aumenta o padding do título */
+    font-weight: bold;;
+
+}
+
+.head-top {
+    color: var(--cor-texto-principal);
+    padding: 0.5rem 0;
+    text-align: left;   
+}
+.header-clinica p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.logo-clinica{
+    width: 80px; /* Define uma largura fixa para o logo */
+    height: auto; /* Mantém a proporção do logo */
+    margin-right: 10px; /* Espaçamento entre o logo e o texto */
+}
+.navbar-clinica {
+    background-color: var(--cor-branca);
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para a barra de navegação */
+}
+
+.navbar-clinica .nav-link {
+    color: var(--cor-texto-principal) !important;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-clinica .nav-link:hover {
+    color: var(--cor-principal) !important;
+    background-color: var(--cor-fundo-claro);
+}
+
+.navbar-clinica .nav-link.active {
+    color: var(--cor-principal) !important;
+    font-weight: 700;
+    border-bottom: 3px solid var(--cor-principal);
+}
+
+.footer-clinica {
+    background-color: var(--cor-texto-principal); /* Rodapé em cinza escuro */
+    color: var(--cor-branca);
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.footer-clinica p {
+    margin-bottom: 0;
+}
+
+/* Estilos para cards em geral */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilos para botões */
+.btn-primary {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--cor-principal), 10%); /* Escurece no hover */
+    border-color: darken(var(--cor-principal), 10%);
+}
+
+.btn-success {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background-color: darken(var(--cor-secundaria), 10%);
+    border-color: darken(var(--cor-secundaria), 10%);
+}
+
+/* Ajustes para tabelas no painel administrativo */
+.table-responsive {
+    border-radius: 10px;
+    overflow-x: auto; /* Garante a rolagem em telas pequenas */
+}
+
+.table {
+    background-color: var(--cor-branca);
+}
+
+.table th {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    border-color: var(--cor-principal);
+}
+
+.table td {
+    border-color: var(--cor-fundo-claro);
+}
+
+/* Estilo para ícones do Material Icons */
+.material-icons {
+    vertical-align: middle;
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.hero-section {
+    /* Define a altura como 100% da altura do viewport (tela visível) */
+    min-height: 100vh; 
+    
+    /* Ativa o Flexbox para alinhar os itens filhos */
+    display: flex;
+    
+    /* Alinha o conteúdo verticalmente no centro */
+    align-items: center; 
+    
+    /* Alinha o conteúdo horizontalmente no centro */
+    justify-content: center; 
+    
+    /* Garante que o texto seja branco e legível sobre a imagem de fundo */
+    color: var(--cor-branca);
+}
+
+.hero-section h2 {
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 800px; /* Evita que o parágrafo fique muito largo em telas grandes */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsividade adicional se necessário */
+@media (max-width: 992px) {
+    .header-clinica h1 {
+        font-size: 2rem;
+    }
+    .header-clinica p {
+        font-size: 1rem;
+    }
+}
