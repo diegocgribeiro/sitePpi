@@ -2,8 +2,8 @@
 :root {
     --cor-principal: #4998ff; /* Azul primário */
     --cor-secundaria: #f5f5f5; /* Verde de destaque */
-    --cor-texto-principal: #3a3a3a; /* Cinza escuro */
-    --cor-fundo-claro: rgba(0, 0, 0, 0.85); /* Cinza claro para fundos */
+    --cor-texto-principal: #000000; /* Cinza escuro */
+    --cor-fundo-claro: rgba(0, 0, 0, 0.73); /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
 }
 
@@ -70,6 +70,18 @@ h3 {
     height: 10rem;
     background-color: white;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.divisao h1{
+    font-family: 'Roboto', sans-serif; /* Ou sua fonte preferida */ /* Tamanho do texto, 'em' é relativo */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #4998ff; /* Cor escura para boa legibilidade */
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 .navbar-clinica .nav-link {
@@ -101,60 +113,12 @@ h3 {
     margin-bottom: 0;
 }
 
-/* Estilos para cards em geral */
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra mais pronunciada */
-    transition: all 0.3s ease-in-out;
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-}
-
-/* Estilos para botões */
-.btn-primary {
-    background-color: var(--cor-principal);
-    border-color: var(--cor-principal);
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    background-color: darken(var(--cor-principal), 10%); /* Escurece no hover */
-    border-color: darken(var(--cor-principal), 10%);
-}
-
-.btn-success {
-    background-color: var(--cor-secundaria);
-    border-color: var(--cor-secundaria);
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-success:hover {
-    background-color: darken(var(--cor-secundaria), 10%);
-    border-color: darken(var(--cor-secundaria), 10%);
-}
-
 /* Ajustes para tabelas no painel administrativo */
 .table-responsive {
     border-radius: 10px;
     overflow-x: auto; /* Garante a rolagem em telas pequenas */
 }
 
-.table {
-    background-color: var(--cor-branca);
-}
-
-.table th {
-    background-color: var(--cor-principal);
-    color: var(--cor-branca);
-    border-color: var(--cor-principal);
-}
-
-.table td {
-    border-color: var(--cor-fundo-claro);
-}
 
 /* Estilo para ícones do Material Icons */
 .material-icons {
@@ -192,6 +156,62 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Container principal para organizar os cards */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+/* Estilo base para cada card de serviço */
+.service-card {
+    width: 300px;
+    height: 200px;/* Largura fixa para os cards (ajuste conforme o design) */
+    background-color: #ffffff; /* Fundo branco para o card */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    overflow: hidden; /* Garante que a imagem e outros conteúdos não vazem dos cantos arredondados */
+    text-align: center; /* Centraliza o texto dentro do card */
+    transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de zoom */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilo para a imagem dentro do card */
+
+/* Estilo para o título do serviço */
+.service-card h3 {
+    padding: 25px 15px 15px; /* Espaçamento interno */
+    margin: 0; /* Remove margens padrão */
+    color: #4998ff; /* Cor do texto */
+    font-weight: bold;
+}
+
+/* Estilo para a descrição do serviço */
+.service-card p {
+    padding: 0px 15px 15px; /* Espaçamento interno */
+    color: #666; /* Cor do texto mais suave */
+    font-size: 0.95em; /* Tamanho da fonte ligeiramente menor */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    margin: 0;
+}
+
+/* Efeito de zoom no card inteiro ao passar o mouse */
+.service-card:hover {
+    transform: scale(1.05); /* Aumenta o card em 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+/* Efeito de zoom na imagem ao passar o mouse (opcional, mas legal) */
+
+.nossos-servicos-section{
+    height: 30em;
+    margin-top: 6em;
+
 }
 
 /* Responsividade adicional se necessário */
