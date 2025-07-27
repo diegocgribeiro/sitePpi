@@ -1,9 +1,9 @@
 /* Paleta de cores da clínica */
 :root {
-    --cor-principal: #0010f1; /* Azul primário */
+    --cor-principal: #4998ff; /* Azul primário */
     --cor-secundaria: #f5f5f5; /* Verde de destaque */
     --cor-texto-principal: #3a3a3a; /* Cinza escuro */
-    --cor-fundo-claro: #bdbdbd; /* Cinza claro para fundos */
+    --cor-fundo-claro: rgba(0, 0, 0, 0.85); /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
 }
 
@@ -43,7 +43,8 @@ h3 {
 .head-top {
     color: var(--cor-texto-principal);
     padding: 0.5rem 0;
-    text-align: left;   
+    text-align: left;
+    color: white;
 }
 .header-clinica p {
     font-size: 1.1rem;
@@ -61,6 +62,16 @@ h3 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para a barra de navegação */
 }
 
+.navbar-clinica a {
+    margin-left: 20px;
+}
+
+.divisao{
+    height: 10rem;
+    background-color: white;
+    width: 100%;
+}
+
 .navbar-clinica .nav-link {
     color: var(--cor-texto-principal) !important;
     font-weight: 500;
@@ -70,7 +81,7 @@ h3 {
 
 .navbar-clinica .nav-link:hover {
     color: var(--cor-principal) !important;
-    background-color: var(--cor-fundo-claro);
+    font-weight: 700;
 }
 
 .navbar-clinica .nav-link.active {
