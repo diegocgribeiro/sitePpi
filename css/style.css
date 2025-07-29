@@ -1,9 +1,9 @@
 /* Paleta de cores da clínica */
 :root {
-    --cor-principal: #4998ff; /* Azul primário */
+    --cor-principal: #1159f3; /* Azul primário */
     --cor-secundaria: #f5f5f5; /* Verde de destaque */
     --cor-texto-principal: #000000; /* Cinza escuro */
-    --cor-fundo-claro: rgba(0, 0, 0, 0.73); /* Cinza claro para fundos */
+    --cor-fundo-claro: rgb(255, 255, 255); /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
 }
 
@@ -18,13 +18,11 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif; /* Uma fonte limpa e moderna */
     line-height: 1.7; /* Melhor espaçamento entre linhas */
-    color: var(--cor-texto-principal);
     background-color: var(--cor-fundo-claro);
-    background-image: url("../images/clinica.png");
-    background-size: cover; /* Cobre todo o fundo */
-    background-attachment: fixed;
-    background-position: center; /* Centraliza a imagem de fundo */
-    background-blend-mode: overlay; /* Combina a imagem com uma cor de fundo */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/clinica.png");
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    background-size: 100%;
 }
 
 
@@ -36,15 +34,15 @@ body {
 h3 {
     font-size: 1rem;
     padding: 0 1.5rem; /* Aumenta o padding do título */
-    font-weight: bold;;
+    font-weight: bold;
 
 }
 
 .head-top {
-    color: var(--cor-texto-principal);
-    padding: 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
     text-align: left;
-    color: white;
+    color: #ffffff;
 }
 .header-clinica p {
     font-size: 1.1rem;
@@ -103,8 +101,8 @@ h3 {
 }
 
 .footer-clinica {
-    background-color: var(--cor-texto-principal); /* Rodapé em cinza escuro */
-    color: var(--cor-branca);
+    background-color: white; /* Rodapé em cinza escuro */
+    color: var(--cor-principal);
     padding: 2rem 0;
     margin-top: 3rem;
 }
@@ -144,19 +142,11 @@ h3 {
     color: var(--cor-branca);
 }
 
-.hero-section h2 {
-    font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+.hero-section img {
+    width: 600px;
+    box-shadow: var(--cor-fundo-claro);
 }
 
-.hero-section p {
-    font-size: 1.25rem;
-    font-weight: 300;
-    max-width: 800px; /* Evita que o parágrafo fique muito largo em telas grandes */
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-}
 
 /* Container principal para organizar os cards */
 .services-container {
@@ -209,8 +199,8 @@ h3 {
 /* Efeito de zoom na imagem ao passar o mouse (opcional, mas legal) */
 
 .nossos-servicos-section{
-    height: 30em;
-    margin-top: 6em;
+    height: 50em;
+    margin-top: em;
 
 }
 
