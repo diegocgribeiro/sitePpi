@@ -1,0 +1,92 @@
+:root {
+    --cor-principal: #0453a5;
+    /* Azul primário */
+    --cor-secundaria: #e6f0fc;
+    /* Azul claro*/
+    --cor-texto-principal: #000000;
+    /* Cinza escuro */
+    --cor-fundo-claro: #f9f9f9;
+    /* Cinza claro para fundos */
+    --cor-branca: #FFFFFF;
+}
+
+header.head-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-principal);
+    height: 3rem;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: var(--cor-branca);
+    font-size: 2rem;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    background-color: var(--cor-fundo-claro);
+}
+
+.navbar-clinica {
+    background-color: var(--cor-branca);
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navbar-clinica .nav-link {
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-left: 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.navbar-clinica .nav-link:hover {
+    color: var(--cor-principal);
+    font-weight: 700;
+    background-color: var(--cor-secundaria);
+}
+
+.navbar-clinica .nav-link.active {
+    color: var(--cor-principal);
+    font-weight: 700;
+    border-bottom: 3px solid var(--cor-principal);
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--cor-fundo-claro);
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+    text-align: center;
+}
