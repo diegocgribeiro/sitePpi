@@ -90,3 +90,8 @@ footer {
     display: block;
     text-align: center;
 }
+
+.botao_escondido{
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+}
