@@ -1,4 +1,3 @@
-/* Paleta de cores da clínica */
 :root {
     --cor-principal: #0453a5; /* Azul primário */
     --cor-secundaria: #f5f5f5; /* Verde de destaque */
@@ -7,408 +6,187 @@
     --cor-branca: #FFFFFF;
 }
 
-section{
-    text-align: center; /* Centraliza o texto em seções */
-    box-sizing: border-box;
-}
 
-
-body {
-    height: 100%;
-    margin: 0;
-    font-family: 'Roboto', sans-serif; /* Uma fonte limpa e moderna */
-    line-height: 1.7; /* Melhor espaçamento entre linhas */
-    background-color: var(--cor-fundo-claro);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/clinica.png");
-    background-repeat: no-repeat;
-    backface-visibility: hidden;
-    background-size: 100%;
-}
-
-
-.header-clinica {
+.central{
+    margin-bottom: 0%;
     background-color: var(--cor-principal);
-    color: var(--cor-branca);    
+    color: white;
+    height: 2rem;
+    font-size: 1.0rem;
+}
+div>h3.central{
+    padding-left: 0.6rem;
+    padding-top: 0.2rem;
 }
 
-h3 {
-    font-size: 1rem;
-    padding: 0 1.5rem; /* Aumenta o padding do título */
-    font-weight: bold;
-
+.navbar-nav-custom .nav-link:hover,
+.navbar-nav-custom .nav-link.active {
+    color: var(--cor-principal) !important;
 }
 
-.head-top {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Centers content vertically */
-    justify-items: center;
-    background-color: #0453a5;
-    text-align: left;
-    color: #ffffff;
+
+
+/* --- Estilos da Navbar Customizada --- */
+.navbar-custom {
+    background-color: #f8f9fa; /* Cor de fundo da navbar, usei um cinza claro */
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
     width: 100%;
-    height: 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+
+/* Adiciona um "clearfix" para conter os elementos flutuantes dentro do container */
+.navbar-custom .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Logo */
+.navbar-logo {
+    float: left; /* Alinha a logo à esquerda */
+    padding-top: 5px;
+    padding-bottom: 0;
+
+}
+
+.navbar-logo img {
+   height: 45px;
+    width: auto;
+}
+
+/* Botão Toggler para mobile */
+.navbar-toggler {
+    float: right; /* Alinha o botão à direita */
+    display: none; /* Escondido em telas grandes por padrão */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+/* Lista de Navegação */
+#navbarNav {
+    float: right; /* Alinha o menu à direita em telas grandes */
+}
+
+.navbar-nav-custom {
+    list-style: none;
     margin: 0;
+    padding: 0;
+    margin-top: 10px; /* Alinha verticalmente com a logo */
 }
 
-.head-top h3 {
-    margin: 0;
-}
-
-
-.header-clinica p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-}
-
-.logo-clinica{
-    width: 80px; /* Define uma largura fixa para o logo */
-    height: auto; /* Mantém a proporção do logo */
-    margin-right: 10px;
-}
-.navbar-clinica {
-    background-color: var(--cor-branca);
-    border-bottom: 1px solid var(--cor-fundo-claro);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para a barra de navegação */
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-}
-
-.navbar-clinica a {
+.navbar-nav-custom .nav-item {
+    float: left; /* Faz os itens da lista ficarem lado a lado */
     margin-left: 20px;
 }
 
-
-.nossos-servicos-section h1{
-    font-family: 'Roboto', sans-serif; /* Ou sua fonte preferida */ /* Tamanho do texto, 'em' é relativo */
-    font-weight: bold; /* Deixa o texto em negrito */
-    color: #4998ff; /* Cor escura para boa legibilidade */
-    text-align: center; /* Centraliza o texto horizontalmente */
-}
-
-.navbar-clinica .nav-link {
-    color: var(--cor-texto-principal) !important;
-    font-weight: 500;
-    padding: 0.8rem 1rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar-clinica .nav-link:hover {
-    color: var(--cor-principal) !important;
-    font-weight: 700;
-}
-
-.navbar-clinica .nav-link.active {
-    color: var(--cor-principal) !important;
-    font-weight: 700;
-    border-bottom: 3px solid var(--cor-principal);
-}
-
-.footer-clinica {
-    background-color: white; /* Rodapé em cinza escuro */
-    color: var(--cor-principal);
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-.footer-clinica p {
-    margin-bottom: 0;
-}
-
-/* Ajustes para tabelas no painel administrativo */
-.table-responsive {
-    border-radius: 10px;
-    overflow-x: auto; /* Garante a rolagem em telas pequenas */
-}
-
-
-/* Estilo para ícones do Material Icons */
-.material-icons {
-    vertical-align: middle;
-    margin-right: 5px;
-    font-size: 1.2em;
-}
-
-.hero-section {
-    /* Define a altura como 100% da altura do viewport (tela visível) */
-    min-height: 100vh; 
-    
-    /* Ativa o Flexbox para alinhar os itens filhos */
-    display: flex;
-    
-    /* Alinha o conteúdo verticalmente no centro */
-    align-items: center; 
-    
-    /* Alinha o conteúdo horizontalmente no centro */
-    justify-content: center; 
-    
-    /* Garante que o texto seja branco e legível sobre a imagem de fundo */
-    color: var(--cor-branca);
-}
-
-.hero-section img {
-    width: 600px; /* Garante que a logo seja responsiva e não ultrapasse a tela */
-
-}
-
-.hero-section img:hover {
-    transform: scale(1.30); /* Aumenta o card em 5% */
-
-}
-
-
-/* Container principal para organizar os cards */
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-
-}
-
-/* Estilo base para cada card de serviço */
-.service-card {
-    width: 300px;
-    height: 200px;/* Largura fixa para os cards (ajuste conforme o design) */
-    background-color: var(--cor-principal); /* Fundo branco para o card */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
-    overflow: hidden; /* Garante que a imagem e outros conteúdos não vazem dos cantos arredondados */
-    text-align: center; /* Centraliza o texto dentro do card */
-    transition: transform 0.3s ease-in-out; /* Transição suave para o efeito de zoom */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-}
-
-/* Estilo para a imagem dentro do card */
-
-/* Estilo para o título do serviço */
-.service-card h3 {
-    padding: 25px 15px 15px; /* Espaçamento interno */
-    margin: 0; /* Remove margens padrão */
-    color: white; /* Cor do texto */
-    font-weight: bold;
-}
-
-/* Estilo para a descrição do serviço */
-.service-card p {
-    padding: 0px 15px 15px; /* Espaçamento interno */
-    color: rgba(255, 255, 255, 0.94); /* Cor do texto mais suave */
-    font-size: 0.95em; /* Tamanho da fonte ligeiramente menor */
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
-    margin: 0;
-}
-
-/* Efeito de zoom no card inteiro ao passar o mouse */
-.service-card:hover {
-    transform: scale(1.05); /* Aumenta o card em 5% */
-    box-shadow: 0 8px 16px rgba(0, 138, 21, 0.18); /* Aumenta a sombra no hover */
-}
-
-/* Efeito de zoom na imagem ao passar o mouse (opcional, mas legal) */
-
-.nossos-servicos-section{
-    height: 40em;
-
-}
-
-.main-content-area {
-    display: grid;
-    /* Define duas colunas: a primeira para a imagem (35% da largura) e a segunda para o conteúdo (65%) */
-    grid-template-columns: 65% 35%;
-    min-height: calc(100vh - 80px); /* Ajuste com base na altura do seu header */
-    /* Assumindo um header de 80px. Se não tiver header, use 100vh */
-    width: 100%;
-    align-items: center; /* Centraliza verticalmente o conteúdo de cada coluna */
-    background-color: rgba(153, 175, 149, 0.6); /* Cor de fundo da área de conteúdo para igualar a imagem */
-}
-
-.image-column {
-    height: 100%; /* Ocupa toda a altura da sua linha no grid */
-    overflow: hidden; /* Garante que a imagem não transborde */
-    display: flex; /* Para centralizar a imagem verticalmente, se necessário */
-    align-items: flex-end; /* Alinha a imagem à parte inferior da coluna, como na sua foto */
-    justify-content: center; /* Centraliza horizontalmente, se a imagem for menor que a largura da coluna */
-}
-
-.left-image {
-    width: 100%; /* A imagem preenche a largura da coluna */
-    height: 100%; /* A imagem tenta preencher a altura da coluna */
-    object-fit: cover; /* Recorta a imagem para preencher o contêiner sem distorcer */
-    object-position: bottom center; /* Alinha a parte inferior da imagem ao fundo do contêiner */
-    display: block; /* Remove espaços extras sob a imagem */
-}
-
-/* Seção de Destaques Principal (já existente, alguns ajustes) */
-.destaques-section {
-    width: 100%; /* Garante que ocupe a largura total da sua célula Grid */
-    padding: 40px 20px; /* Ajuste o padding para o lado esquerdo se precisar de mais espaço */
-    box-sizing: border-box;
-}
-
-.destaques-container {
-    max-width: 800px; /* Limita a largura do conteúdo de destaques */
-    margin-left: auto; /* Centraliza o conteúdo de destaques dentro da coluna */
-    margin-right: auto;
-    padding-left: 20px; /* Adiciona um padding extra à esquerda, se necessário, para afastar da imagem */
-}
-
-.destaques-container h2 {
-    font-size: 2.2em;
-    color: #333;
-    margin-bottom: 10px;
-    font-weight: normal;
-    text-align: end;
-
-}
-
-.destaques-container p {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.5;
-    margin-bottom: 30px;
-    width: 100%;
-    text-align: end;
-}
-
-/* Wrapper dos Cards (usando Grid para o layout 2 colunas) */
-.cards-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado minmax para caber melhor */
-    gap: 20px;
-}
-
-/* Estilos para cada Card Individual (mantidos do exemplo anterior) */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 220px; /* Altura um pouco maior para acomodar conteúdo */
-}
-
-.card-icon {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: #fff;
-}
-
-.checkup-icon {
-    background-color: var(--cor-principal);
-}
-
-.cirurgia-icon {
-    background-color: #8bc34a;
-}
-
-.card h3 {
-    font-size: 1.3em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 0.95em;
-    color: #777;
-    line-height: 1.4;
-    margin-bottom: 15px;
-    flex-grow: 1;
-    text-align: center;
-
-}
-
-.card-link {
-    display: inline-block;
-    font-size: 1.2em;
-    color: #007bff;
+.navbar-nav-custom .nav-link {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-nav-custom .nav-link.active,
+.navbar-nav-custom .nav-link:hover {
+    color: #007bff; /* Cor de destaque ao passar o mouse ou no item ativo */
+}
+
+/* Contêiner para a imagem de fundo e o overlay de texto */
+.principal {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+.principal img {
+    /* Make the image fill its container and be responsive */
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the image */
+}
+.legenda {
+    position: absolute;
+    left: 20em;
+    bottom: 17em;
+    color: white;
+
+}
+.legenda>h1 {
+    font-size: 5vw; /* Adjust for desired size on different screens */
     font-weight: bold;
-    transition: transform 0.2s ease-in-out;
+    /* Limit max font size for very large screens */
+    max-font-size: 5em;
+    white-space: nowrap; /* Prevent text from wrapping if it gets too long */
+    overflow: hidden; /* Hide overflow if nowrap causes issues */
+    text-overflow: ellipsis; /* Add ellipsis if text is cut off */
+
+}
+.legenda>h3 {
+    font-size: 2vw; /* Adjust for desired size */
+    font-weight: bold;
+    margin-left: 0.2em; /* Use em for margin relative to font size */
+    max-font-size: 2em; /* Limit max font size */
+
 }
 
-.card-link:hover {
-    transform: translateX(5px);
+
+
+@media (min-width: 992px) {
+    #navbarNav {
+        display: block;
+    }
+
 }
+/* --- Responsividade para Telas Pequenas --- */
+@media (max-width: 800px) {
+    .navbar-toggler {
+        display: block; /* Mostra o botão em telas pequenas */
+        margin-top: 15px;
 
-/* Media Queries para Responsividade (IMPORTANTE para esse layout) */
-@media (max-width: 992px) {
-    .main-content-area {
-        grid-template-columns: 1fr; /* Em telas menores, as colunas viram uma única coluna */
-        min-height: auto; /* Remove a altura mínima para que o conteúdo se ajuste */
     }
 
-    .image-column {
-        height: 300px; /* Altura fixa para a imagem em telas menores */
-        align-items: center; /* Centraliza a imagem verticalmente na coluna */
-    }
 
-    .left-image {
+    #navbarNav {
+        float: none; /* Remove a flutuação no modo mobile */
         width: 100%;
-        height: 100%;
-        object-fit: cover; /* Mantém o corte para preencher */
-        object-position: top center; /* Ajusta o foco para o topo em telas menores */
+        clear: both; /* Garante que o menu ocupe sua própria linha */
+        background-color: #f8f9fa; /* Fundo para o menu aberto */
     }
 
-    .destaques-section {
-        padding: 40px 20px; /* Padding ajustado para telas menores */
+    /* Regra do Bootstrap para esconder o menu quando ele não está ativo */
+    #navbarNav.collapse:not(.show) {
+        display: none;
     }
 
-    .destaques-container {
-        padding-left: 0; /* Remove padding extra quando está em coluna única */
-        max-width: 600px; /* Limita a largura em telas menores para melhor leitura */
-        margin: 0 auto; /* Centraliza o conteúdo */
+    .navbar-nav-custom {
+        margin-top: 10px;
     }
 
-    .destaques-container h2 {
-        text-align: center; /* Centraliza o título em telas menores */
+    .navbar-nav-custom .nav-item {
+        float: none; /* Itens do menu ficam um abaixo do outro */
+        margin-left: 0;
+        text-align: center;
+        border-top: 1px solid #e7e7e7;
     }
 
-    .destaques-container p {
-        text-align: center; /* Centraliza o parágrafo em telas menores */
+    .navbar-nav-custom .nav-item a {
+        padding: 12px 0;
+        display: block; /* Faz o link ocupar toda a largura do item */
     }
+    footer{
+        margin-top: 50px;
+        height: auto;
+    }
+    .legenda {
+        display: none;
+    }
+
 }
-
-@media (max-width: 768px) {
-    .cards-wrapper {
-        grid-template-columns: 1fr; /* Cards em uma única coluna */
-    }
-    .card {
-        min-height: auto; /* Remove altura mínima para cards em mobile */
-    }
-}
-
 @media (max-width: 480px) {
-    .destaques-container h2 {
-        font-size: 1.8em;
-    }
-    .destaques-container p {
-        font-size: 0.9em;
-    }
-    .card {
-        padding: 20px;
-    }
-    .card-icon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* Responsividade adicional se necessário */
-@media (max-width: 992px) {
-    .header-clinica h1 {
-        font-size: 2rem;
-    }
-    .header-clinica p {
-        font-size: 1rem;
+    .legenda {
+        display: none;
     }
 }
