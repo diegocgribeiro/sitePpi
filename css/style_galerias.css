@@ -99,7 +99,7 @@ div>h3.central{
     }
 }
 /* --- Responsividade para Telas Pequenas --- */
-@media (max-width: 991px) {
+@media (max-width: 800px) {
     .navbar-toggler {
         display: block; /* Mostra o botão em telas pequenas */
         margin-top: 15px;
@@ -133,6 +133,10 @@ div>h3.central{
         padding: 12px 0;
         display: block; /* Faz o link ocupar toda a largura do item */
     }
+    footer{
+        margin-top: 50px;
+        height: auto;
+    }
     
 }
 
@@ -143,6 +147,7 @@ div>h3.central{
 
 footer{
     background-color: #384734;
+    height: auto;
     
 }
 
