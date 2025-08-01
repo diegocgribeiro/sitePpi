@@ -56,7 +56,7 @@ div>h3.central{
 }
 
 .navbar-logo img {
-   height: 45px;
+   height: 50px;
     width: auto;
 }
 
@@ -141,7 +141,7 @@ div>h3.central{
 }
 
 
-.subtitle {
+.subtitulo {
     font-size: 20px;
     color: var(--cor-principal);
     margin-bottom: 5px;
@@ -150,7 +150,7 @@ div>h3.central{
     font-weight: bold;
 }
 
-.title {
+.titulo {
     font-size: 32px;
     color: var(--cor-verde);
     margin-top: 0;
@@ -213,10 +213,12 @@ div>h3.central{
     padding: 20px;
     text-align: center;
     background-color: var(--cor-principal);
+    padding-bottom: 5vh;
+
 }
 
 
-.cards-container2 .subtitle {
+.cards-container2 .subtitulo {
     margin-top: 30px;
     font-size: 20px;
     color: #b5b5b5;
@@ -226,7 +228,7 @@ div>h3.central{
     font-weight: bold;
 }
 
-.cards-container2 .title {
+.cards-container2 .titulo {
     font-size: 32px;
     color: white;
     margin-top: 0;
@@ -278,12 +280,59 @@ div>h3.central{
     height: 120px;
 }
 
-.cards-container2 .card-content p {
-    font-size: 16px;
+.cards-container2 .card-content h3 {
+    font-size: 25px;
     line-height: 1.5;
     margin: 0;
+    text-align: center;
+    font-weight: bold;
+
+}
+.duvidas-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
 }
 
+.duvidas-title {
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.duvidas-item {
+    border: 1px solid var(--cor-principal);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden; /* Para esconder o conteúdo da resposta inicialmente */
+}
+
+.duvidas-question {
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: var(--cor-principal);
+    font-size: 1.1em;
+    cursor: pointer;
+    position: relative; /* Necessário para posicionar a seta */
+    transition: background-color 0.3s ease;
+}
+
+.duvidas-question:hover {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+.duvidas-question .arrow {
+    position: absolute; /* Posição absoluta em relação ao .duvidas-question */
+    right: 20px; /* Distância da direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralização vertical */
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
 
 footer{
     background-color: #384734;
