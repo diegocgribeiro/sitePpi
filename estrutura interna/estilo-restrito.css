@@ -1,12 +1,7 @@
 :root {
     --cor-principal: #0453a5;
-    /* Azul primário */
-    --cor-secundaria: #e6f0fc;
-    /* Azul claro*/
+    --cor-secundaria: #dce9f8;
     --cor-texto-principal: #000000;
-    /* Cinza escuro */
-    --cor-fundo-claro: #f9f9f9;
-    /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
 }
 
@@ -94,4 +89,20 @@ footer {
 .botao_escondido{
     text-decoration: none;
     color: var(--cor-texto-principal);
+}
+
+.tabela{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  background-color:var(--cor-secundaria);
+  border: 1px solid #ccc;
+}
+thead {
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+}
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
 }

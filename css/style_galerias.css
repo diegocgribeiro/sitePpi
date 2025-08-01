@@ -1,11 +1,11 @@
 :root {
-    --cor-principal: #ffffff; /* Azul primário */
+    --cor-principal: #0453a5; /* Azul primário */
     --cor-secundaria: #f5f5f5; /* Verde de destaque */
     --cor-texto-principal: #000000; /* Cinza escuro */
     --cor-fundo-claro: rgb(255, 255, 255); /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
+    --cor-verde: #456144;
 }
-
 
 .central{
     margin-bottom: 0%;
