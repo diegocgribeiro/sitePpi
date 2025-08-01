@@ -1,0 +1,241 @@
+:root {
+    --cor-principal: #0453a5; /* Azul primário */
+    --cor-secundaria: #f5f5f5; /* Verde de destaque */
+    --cor-texto-principal: #000000; /* Cinza escuro */
+    --cor-fundo-claro: rgb(255, 255, 255); /* Cinza claro para fundos */
+    --cor-branca: #FFFFFF;
+    --cor-verde: #456144;
+}
+
+
+.central{
+    margin-bottom: 0%;
+    background-color: var(--cor-principal);
+    color: white;
+    height: 2rem;
+    font-size: 1.0rem;
+}
+div>h3.central{
+    padding-left: 0.6rem;
+    padding-top: 0.2rem;
+}
+
+.navbar-nav-custom .nav-link:hover,
+.navbar-nav-custom .nav-link.active {
+    color: var(--cor-principal) !important;
+}
+
+
+
+/* --- Estilos da Navbar Customizada --- */
+.navbar-custom {
+    background-color: #f8f9fa; /* Cor de fundo da navbar, usei um cinza claro */
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+
+/* Adiciona um "clearfix" para conter os elementos flutuantes dentro do container */
+.navbar-custom .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Logo */
+.navbar-logo {
+    float: left; /* Alinha a logo à esquerda */
+    padding-top: 5px;
+    padding-bottom: 0;
+
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Botão Toggler para mobile */
+.navbar-toggler {
+    float: right; /* Alinha o botão à direita */
+    display: none; /* Escondido em telas grandes por padrão */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+/* Lista de Navegação */
+#navbarNav {
+    float: right; /* Alinha o menu à direita em telas grandes */
+}
+
+.navbar-nav-custom {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px; /* Alinha verticalmente com a logo */
+}
+
+.navbar-nav-custom .nav-item {
+    float: left; /* Faz os itens da lista ficarem lado a lado */
+    margin-left: 20px;
+}
+
+.navbar-nav-custom .nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-nav-custom .nav-link.active,
+.navbar-nav-custom .nav-link:hover {
+    color: #007bff; /* Cor de destaque ao passar o mouse ou no item ativo */
+}
+
+
+
+.agendamento-form {
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--cor-principal);
+
+    max-width: 700px; /* Limita a largura do formulário */
+}
+
+.agendamento-form h2 {
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.formulario .grupo-form {
+    margin-bottom: 18px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario input[type="date"],
+.formulario input[type="time"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-principal);
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    font-size: 1em;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="tel"]:focus,
+.formulario input[type="date"]:focus,
+.formulario input[type="time"]:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: #03253c;
+    outline: none;
+    box-shadow: 0 0 5px rgb(0, 91, 145);
+}
+
+.formulario textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.formulario button {
+    background-color: var(--cor-principal);
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block; /* Ocupa a largura total */
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #213a8a;
+    color: white;
+}
+
+/* Rodapé */
+footer{
+    background-color: #384734;
+    height: auto;
+
+}
+
+@media (min-width: 992px) {
+    #navbarNav {
+        display: block;
+    }
+
+}
+/* --- Responsividade para Telas Pequenas --- */
+@media (max-width: 800px) {
+    .navbar-toggler {
+        display: block; /* Mostra o botão em telas pequenas */
+        margin-top: 15px;
+
+    }
+
+
+    #navbarNav {
+        float: none; /* Remove a flutuação no modo mobile */
+        width: 100%;
+        clear: both; /* Garante que o menu ocupe sua própria linha */
+        background-color: #f8f9fa; /* Fundo para o menu aberto */
+    }
+
+    /* Regra do Bootstrap para esconder o menu quando ele não está ativo */
+    #navbarNav.collapse:not(.show) {
+        display: none;
+    }
+
+    .navbar-nav-custom {
+        margin-top: 10px;
+    }
+
+    .navbar-nav-custom .nav-item {
+        float: none; /* Itens do menu ficam um abaixo do outro */
+        margin-left: 0;
+        text-align: center;
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .navbar-nav-custom .nav-item a {
+        padding: 12px 0;
+        display: block; /* Faz o link ocupar toda a largura do item */
+    }
+    footer{
+        margin-top: 50px;
+        height: auto;
+    }
+    .legenda {
+        display: none;
+    }
+
+}
+@media (max-width: 480px) {
+    .legenda {
+        display: none;
+    }
+}
