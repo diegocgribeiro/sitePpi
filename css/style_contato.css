@@ -9,7 +9,9 @@
     /* Cinza claro para fundos */
     --cor-branca: #FFFFFF;
 }
-
+h2{
+    color:var(--cor-principal)
+}
 
 .central {
     margin-bottom: 0%;
@@ -198,11 +200,10 @@ address {
 
 address:hover {
     background-image: url("../images/logo-sem-fundo.png");
-    background-position: bottom right;
+    background-position: center right;
     background-repeat: no-repeat;
     background-size: contain;
-    min-height: 50px;   
-    padding-right: 60px;
+    background-size: 100px ;
 }
 
 .botao-submit {
