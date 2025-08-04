@@ -302,7 +302,7 @@ div>h3.central{
     overflow: hidden;
 }
 
-.duvidas-question {
+.duvidas-pergunta {
     padding: 15px 20px;
     background-color: #ffffff;
     color: var(--cor-principal);
@@ -312,12 +312,12 @@ div>h3.central{
     transition: background-color 0.3s ease;
 }
 
-.duvidas-question:hover {
+.duvidas-pergunta:hover {
     background-color: var(--cor-principal);
     color: white;
 }
 
-.duvidas-question .arrow {
+.duvidas-pergunta .arrow {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -326,7 +326,7 @@ div>h3.central{
     transition: transform 0.3s ease;
 }
 
-.duvidas-answer {
+.duvidas-resposta {
     display: none;
     padding: 10px 20px 20px;
     background-color: #fff;
@@ -335,7 +335,7 @@ div>h3.central{
 }
 
 
-.duvidas-answer.active {
+.duvidas-resposta.active {
     display: block;
 }
 
