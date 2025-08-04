@@ -116,34 +116,40 @@
         <div class="duvidas-item">
             <div class="duvidas-question">
                 O que é a Clínica F&G?
-                <span class="arrow">&#9660;</span>
+                <span class="arrow">▼</span>
             </div>
             <div class="duvidas-answer">
+                <p>A Clínica F&G é um centro médico completo e moderno, dedicado a oferecer atendimento de saúde de excelência em diversas especialidades.
+                    Nosso principal objetivo é proporcionar um cuidado humanizado e integral para você e sua família.</p>
             </div>
         </div>
         <div class="duvidas-item">
             <div class="duvidas-question">
                 Quais especialidades médicas estão disponíveis na Clínica F&G?
-                <span class="arrow">&#9660;</span>
+                <span class="arrow">▼</span>
             </div>
             <div class="duvidas-answer">
+                <p>Na Clínica F&G, você encontra uma vasta gama de especialidades médicas para cuidar da sua saúde de forma abrangente. Contamos com profissionais
+                    em clínica geral, cardiologia, dermatologia, ginecologia, pediatria, ortopedia e muitas outras áreas.</p>
             </div>
         </div>
         <div class="duvidas-item">
             <div class="duvidas-question">
                 A Clínica F&G aceita planos de saúde?
-                <span class="arrow">&#9660;</span>
+                <span class="arrow">▼</span>
             </div>
             <div class="duvidas-answer">
-                
+                <p>Sim, a Clínica F&G tem convênio com diversos planos de saúde para facilitar seu acesso aos nossos serviços.</p>
             </div>
         </div>
         <div class="duvidas-item">
             <div class="duvidas-question">
                 Posso realizar exames na Clínica F&G?
-                <span class="arrow">&#9660;</span>
+                <span class="arrow">▼</span>
             </div>
             <div class="duvidas-answer">
+                <p>Sim, a Clínica F&G oferece a comodidade de realizar uma variedade de exames laboratoriais
+                    e de imagem, como ultrassonografia e eletrocardiograma, em um só lugar.</p>
             </div>
         </div>
     </div>
@@ -158,6 +164,26 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const perguntas = document.querySelectorAll('.duvidas-question');
+
+    perguntas.forEach(function (pergunta) {
+        pergunta.addEventListener('click', function () {
+            var resposta = pergunta.nextElementSibling;
+            var arrow = this.querySelector('.arrow');
+            if (resposta.classList.contains('active')) {
+                resposta.classList.remove('active');
+                arrow.textContent = '▼';
+            }
+            else{
+            resposta.classList.add('active');
+            arrow.textContent = '▲';
+            }
+        })
+
+    });
+</script>
+
 </body>
 
 </html>
