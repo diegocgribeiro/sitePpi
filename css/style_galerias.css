@@ -1,8 +1,8 @@
 :root {
-    --cor-principal: #0453a5; /* Azul primário */
-    --cor-secundaria: #f5f5f5; /* Verde de destaque */
-    --cor-texto-principal: #000000; /* Cinza escuro */
-    --cor-fundo-claro: rgb(255, 255, 255); /* Cinza claro para fundos */
+    --cor-principal: #0453a5; 
+    --cor-secundaria: #f5f5f5; 
+    --cor-texto-principal: #000000; 
+    --cor-fundo-claro: rgb(255, 255, 255); 
     --cor-branca: #FFFFFF;
     --cor-verde: #456144;
 }
@@ -26,9 +26,8 @@ div>h3.central{
 
 
 
-/* --- Estilos da Navbar Customizada --- */
 .navbar-custom {
-    background-color: #f8f9fa; /* Cor de fundo da navbar, usei um cinza claro */
+    background-color: #f8f9fa; 
     border-bottom: 1px solid #dee2e6;
     padding: 10px 0;
     width: 100%;
@@ -38,48 +37,44 @@ div>h3.central{
     z-index: 1030;
 }
 
-/* Adiciona um "clearfix" para conter os elementos flutuantes dentro do container */
 .navbar-custom .container::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* Logo */
 .navbar-logo {
-    float: left; /* Alinha a logo à esquerda */
+    float: left; 
     padding-top: 5px;
     padding-bottom: 0;
     
 }
 
 .navbar-logo img {
-    height: 50px; /* Altura da imagem da logo */
+    height: 50px; 
     width: auto;
 }
 
-/* Botão Toggler para mobile */
 .navbar-toggler {
-    float: right; /* Alinha o botão à direita */
-    display: none; /* Escondido em telas grandes por padrão */
+    float: right; 
+    display: none; 
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     
 }
 
-/* Lista de Navegação */
 #navbarNav {
-    float: right; /* Alinha o menu à direita em telas grandes */
+    float: right; 
 }
 
 .navbar-nav-custom {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 10px; /* Alinha verticalmente com a logo */
+    margin-top: 10px; 
 }
 
 .navbar-nav-custom .nav-item {
-    float: left; /* Faz os itens da lista ficarem lado a lado */
+    float: left; 
     margin-left: 20px;
 }
 
@@ -91,29 +86,28 @@ div>h3.central{
 
 .navbar-nav-custom .nav-link.active,
 .navbar-nav-custom .nav-link:hover {
-    color: #007bff; /* Cor de destaque ao passar o mouse ou no item ativo */
+    color: #007bff; 
 }
 @media (min-width: 992px) {
     #navbarNav {
         display: block; 
     }
 }
-/* --- Responsividade para Telas Pequenas --- */
+
 @media (max-width: 800px) {
     .navbar-toggler {
-        display: block; /* Mostra o botão em telas pequenas */
+        display: block;
         margin-top: 15px;
     
     }
 
     #navbarNav {
-        float: none; /* Remove a flutuação no modo mobile */
+        float: none; 
         width: 100%;
-        clear: both; /* Garante que o menu ocupe sua própria linha */
-        background-color: #f8f9fa; /* Fundo para o menu aberto */
+        clear: both; 
+        background-color: #f8f9fa;
     }
 
-    /* Regra do Bootstrap para esconder o menu quando ele não está ativo */
     #navbarNav.collapse:not(.show) {
         display: none;
     }
@@ -123,7 +117,7 @@ div>h3.central{
     }
 
     .navbar-nav-custom .nav-item {
-        float: none; /* Itens do menu ficam um abaixo do outro */
+        float: none; 
         margin-left: 0;
         text-align: center;
         border-top: 1px solid #e7e7e7;
@@ -131,7 +125,7 @@ div>h3.central{
     
     .navbar-nav-custom .nav-item a {
         padding: 12px 0;
-        display: block; /* Faz o link ocupar toda a largura do item */
+        display: block; 
     }
     footer{
         margin-top: 50px;
