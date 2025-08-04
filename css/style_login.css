@@ -184,4 +184,10 @@ footer{
 }
 
 
+h2{
+    color: var(--cor-principal);
+}
 
+h2:hover{
+    color: var(--cor-verde);
+}
