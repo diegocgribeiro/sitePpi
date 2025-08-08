@@ -10,92 +10,93 @@
 </head>
 
 <body>
+    <header>
+        <div>
+            <h3 class="central">Central de Atendimento: (34) 3232-3232</h3>
+        </div>
 
-<div>
-    <h3 class="central">Central de Atendimento: (34) 3232-3232</h3>
-</div>
+        <nav class="navbar-custom">
+            <div class="container">
 
-<nav class="navbar-custom">
-    <div class="container">
+                <a href="index.html" class="navbar-logo">
+                    <img src="images/logo-sem-fundo.png" alt="Logo da Clínica">
+                </a>
 
-        <a href="index.html" class="navbar-logo">
-            <img src="images/logo-sem-fundo.png" alt="Logo da Clínica">
-        </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <ul class="collapse navbar-nav-custom" id="navbarNav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="galeria.html">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="agendamento.html">Agendamento</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
 
-        <ul class="collapse navbar-nav-custom" id="navbarNav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="galeria.html">Galeria</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-            <li class="nav-item"><a class="nav-link active" href="agendamento.html">Agendamento</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        </ul>
-
-    </div>
-</nav>
-
-<main>
-    <section class="agendamento-form">
-        <h2>Agende sua Consulta</h2>
-        <form action="#" method="POST" class="formulario">
-            <div class="grupo-form">
-                <label for="name">Nome Completo:</label>
-                <input type="text" id="name" name="name" required>
             </div>
+        </nav>
+    </header>
+    <main>
+        <section class="agendamento-form">
+            <h2>Agende sua Consulta</h2>
+            <form action="#" method="POST" class="formulario">
+                <div class="grupo-form">
+                    <label for="name">Nome Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <div class="grupo-form">
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                <div class="grupo-form">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div class="grupo-form">
-                <label for="phone">Telefone:</label>
-                <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX" pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" required>
-            </div>
+                <div class="grupo-form">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXXX-XXXX"
+                        pattern="[0-9]{2}[0-9]{4,5}[0-9]{4}" required>
+                </div>
 
-            <div class="grupo-form">
-                <label for="specialty">Especialidade:</label>
-                <select id="specialty" name="specialty" required>
-                    <option value="">Selecione uma especialidade</option>
-                    <option value="clinico-geral">Clínico Geral</option>
-                    <option value="dermatologia">Dermatologia</option>
-                    <option value="cardiologia">Cardiologia</option>
-                    <option value="pediatria">Pediatria</option>
-                    <option value="ginecologia">Ginecologia</option>
-                </select>
-            </div>
+                <div class="grupo-form">
+                    <label for="specialty">Especialidade:</label>
+                    <select id="specialty" name="specialty" required>
+                        <option value="">Selecione uma especialidade</option>
+                        <option value="clinico-geral">Clínico Geral</option>
+                        <option value="dermatologia">Dermatologia</option>
+                        <option value="cardiologia">Cardiologia</option>
+                        <option value="pediatria">Pediatria</option>
+                        <option value="ginecologia">Ginecologia</option>
+                    </select>
+                </div>
 
-            <div class="grupo-form">
-                <label for="date">Data Preferencial:</label>
-                <input type="date" id="date" name="date" required>
-            </div>
+                <div class="grupo-form">
+                    <label for="date">Data Preferencial:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
 
-            <div class="grupo-form">
-                <label for="time">Horário Preferencial:</label>
-                <input type="time" id="time" name="time" required>
-            </div>
+                <div class="grupo-form">
+                    <label for="time">Horário Preferencial:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
 
-            <div class="grupo-form">
-                <label for="message">Mensagem (opcional):</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
+                <div class="grupo-form">
+                    <label for="message">Mensagem (opcional):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
 
-            <button type="submit">Agendar Consulta</button>
-        </form>
-    </section>
-</main>
+                <button type="submit">Agendar Consulta</button>
+            </form>
+        </section>
+    </main>
 
-<footer class=" text-white text-center p-3">
-    <div class="container">
-        <p>&copy; 2025 - Clínica F&G. Todos os direitos reservados.</p>
-    </div>
-</footer>
+    <footer class=" text-white text-center p-3">
+        <div class="container">
+            <p>&copy; 2025 - Clínica F&G. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

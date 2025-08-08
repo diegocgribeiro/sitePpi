@@ -111,18 +111,14 @@ div>h3.central{
 .legenda>h1 {
     font-size: 5vw;
     font-weight: bold;
-    max-font-size: 5vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
 }
 .legenda>h3 {
     font-size: 2vw;
     font-weight: bold;
     margin-left: 0.2em;
-    max-font-size: 2em;
-
 }
 
 
