@@ -46,6 +46,33 @@
                     <?php
                     require "../php/conexaoMysql.php";
                     $pdo = mysqlConnect();
+                    try {
+                        $sql = "SELECT Nome, CPF, DataNascimento, EstadoCivil, Cargo, Telefone, Email FROM Funcionario";
+                        $stmt = $pdo->query($sql);
+                        while ($row = $stmt->fetch()) {
+                            $Nome = htmlspecialchars($row['Nome']);
+                            $CPF = htmlspecialchars($row['CPF']);
+                            $DataNascimento = htmlspecialchars($row['DataNascimento']);
+                            $EstadoCivil = htmlspecialchars($row['EstadoCivil']);
+                            $Cargo = htmlspecialchars($row['Cargo']);
+                            $Telefone = htmlspecialchars($row['Telefone']);
+                            $Email = htmlspecialchars($row['Email']);
+
+                            echo <<<HTML
+                            <tr>
+                                <td>$Nome</td>
+                                <td>$CPF</td>
+                                <td>$DataNascimento</td>
+                                <td>$EstadoCivil</td>
+                                <td>$Cargo</td>
+                                <td>$Telefone</td>
+                                <td>$Email</td>
+                            </tr>
+                            HTML;
+                        }
+                    } catch (Exception $e) {
+                        exit("Erro: " . $e->getMessage());
+                    }
                     ?>
                 </tbody>
             </table>
