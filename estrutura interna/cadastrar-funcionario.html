@@ -45,6 +45,23 @@
       </div>
 
       <div class="form-group">
+        <label for="date">Data de nascimento:</label>
+        <input type="date" id="date" name="date" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="estadocivil">Estado Civil:</label>
+        <select id="estadocivil" name="estadocivil" class="form-control" required>
+          <option value="">Selecione</option>
+          <option value="solteiro">Solteiro (a)</option>
+          <option value="casado">Casado (a)</option>
+          <option value="divorciado">Divorciado (a)</option>
+          <option value="viúvo">Viúvo (a)</option>
+          <option value="outros">Outros</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label for="cargo">Cargo:</label>
         <input type="text" id="cargo" name="cargo" class="form-control" required>
       </div>
@@ -58,6 +75,11 @@
       <div class="form-group">
         <label for="email">E-mail institucional:</label>
         <input type="email" id="email" name="email" class="form-control" placeholder="@clinicasfeg.com.br" required>
+      </div>
+
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" class="form-control" required>
       </div>
 
       <div class="text-center mt-3">

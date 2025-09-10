@@ -21,6 +21,7 @@ try {
     $pdo->commit();
     header("Location: contato.html");
 } catch (Exception $e) {
+    $pdo->rollBack();
     exit('Falha na transação: ' . $e->getMessage());
 }
 
