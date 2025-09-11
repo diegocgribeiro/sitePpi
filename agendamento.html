@@ -41,7 +41,7 @@
     <main>
         <section class="agendamento-form">
             <h2>Agende sua Consulta</h2>
-            <form action="agendamento.php" method="POST" class="formulario">
+            <form action="agendamento.php" method="GET" class="formulario" name="agendamento">
                 <div class="grupo-form">
                     <label for="name">Nome Completo:</label>
                     <input type="text" id="name" name="name" required>
@@ -59,14 +59,31 @@
                 </div>
 
                 <div class="grupo-form">
-                    <label for="specialty">Especialidade:</label>
-                    <select id="specialty" name="specialty" required>
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option selected disabled value="">Sexo</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="select-especialidade">Especialidade:</label>
+                    <select id="select-especialidade" name="select-especialidade" required>
                         <option value="">Selecione uma especialidade</option>
-                        <option value="clinico-geral">Clínico Geral</option>
-                        <option value="dermatologia">Dermatologia</option>
-                        <option value="cardiologia">Cardiologia</option>
-                        <option value="pediatria">Pediatria</option>
-                        <option value="ginecologia">Ginecologia</option>
+                        <option value="Clinico geral">Clínico Geral</option>
+                        <option value="Dermatologia">Dermatologia</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Ginecologia">Ginecologia</option>
+                    </select>
+                </div>
+
+                <div class="grupo-form">
+                    <label for="select-medico">Medico:</label>
+                    <select id="select-medico" name="select-medico" required>
+                        <option value="">Selecione um médico</option>
                     </select>
                 </div>
 
@@ -81,14 +98,16 @@
                 </div>
 
                 <div class="grupo-form">
-                    <label for="message">Mensagem (opcional):</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
+                    <label for="mensagem">Mensagem (opcional):</label>
+                    <textarea id="message" name="mensagem" rows="4"></textarea>
                 </div>
 
                 <button type="submit">Agendar Consulta</button>
-                <p class="text-secondary">Após a confirmação de sua consulta, você receberá um e-mail com os detalhes</p>
+                <p class="text-secondary">Após a confirmação de sua consulta, você receberá um e-mail com os detalhes
+                </p>
             </form>
         </section>
+
     </main>
 
     <footer class=" text-white text-center p-3">
@@ -98,6 +117,52 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const selecionaEspec = document.getElementById("select-especialidade");
+        const medicoSelect = document.getElementById('select-medico');
+
+        async function buscaMedico(especialidade) {
+            medicoSelect.innerHTML = '<option value="">Carregando...</option>';
+            medicoSelect.disabled = true;
+
+            try {
+                if (!especialidade) {
+                    medicoSelect.innerHTML = '<option value="">Selecione uma especialidade</option>';
+                    return;
+                }
+
+                const response = await fetch('buscar-medicos.php?especialidade='+ especialidade);
+
+                if (!response.ok) {
+                    throw new Error("Falha inesperada: " + response.status);
+                }
+
+                const medicos = await response.json();
+
+                medicoSelect.innerHTML = '<option value="">Selecione o médico</option>';
+
+                medicos.forEach(medico => {
+                    const option = document.createElement("option");
+                    option.setAttribute('name', 'nomeMed');
+                    option.textContent = medico.nomeMed; 
+                    medicoSelect.appendChild(option);
+                });
+
+                if (medicos.length > 0) {
+                    medicoSelect.disabled = false;
+                }
+
+            } catch (e) {
+                console.error(e);
+                medicoSelect.innerHTML = '<option value="">Erro ao carregar</option>';
+            }
+        }
+
+        selecionaEspec.onchange = function () {
+            buscaMedico(selecionaEspec.value);
+        }
+    </script>
 </body>
 
 </html>
