@@ -102,9 +102,10 @@
                     <textarea id="message" name="mensagem" rows="4"></textarea>
                 </div>
 
-                <button type="submit">Agendar Consulta</button>
+                <button type="submit" id="botao">Agendar Consulta</button>
                 <p class="text-secondary">Após a confirmação de sua consulta, você receberá um e-mail com os detalhes
                 </p>
+                <span id="status"></span>
             </form>
         </section>
 
@@ -117,7 +118,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    
     <script>
         const selecionaEspec = document.getElementById("select-especialidade");
         const medicoSelect = document.getElementById('select-medico');

@@ -21,9 +21,9 @@
         <a class="nav-link" href="index.html">Início</a>
         <a class="nav-link" href="cadastrar-funcionario.html">Cadastrar Funcionário</a>
         <a class="nav-link" href="cadastrar-medico.html">Cadastrar Médico</a>
-        <a class="nav-link" href="listar-funcionarios.html">Funcionários</a>
-        <a class="nav-link active" href="listar-medicos.html">Médicos</a>
-        <a class="nav-link" href="listar-agendamentos.html">Agendamentos</a>
+        <a class="nav-link" href="listar-funcionarios.php">Funcionários</a>
+        <a class="nav-link active" href="listar-medicos.php">Médicos</a>
+        <a class="nav-link" href="listar-agendamentos.php">Agendamentos</a>
         <a class="nav-link" href="mostra-contato.php">Mensagens</a>
     </nav>
     <main class="container mt-4">
