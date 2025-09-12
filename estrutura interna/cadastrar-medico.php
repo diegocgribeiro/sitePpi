@@ -1,5 +1,5 @@
 <?php
-require "conexaoMysql.php";
+require "../sql/conexaoMysql.php";
 $pdo = mysqlConnect();
 
 $nome = $_POST['nome'] ?? '';
@@ -10,7 +10,7 @@ $email = $_POST['email'] ?? '';
 
 try {
 
-    $sql = "INSERT INTO Medico (Nome, CRM, Especialidade, Telefone, Email)
+    $sql = "INSERT INTO medico (Nome, CRM, Especialidade, Telefone, Email)
             VALUES (?, ?, ?, ?, ?)";
     $pdo->beginTransaction();
     $stmt = $pdo->prepare($sql);
