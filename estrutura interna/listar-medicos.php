@@ -44,7 +44,7 @@
                     require "../sql/conexaoMysql.php";
                     $pdo = mysqlConnect();
                     try {
-                        $sql = "SELECT Nome, CRM, Especialidade, Telefone, Email FROM Medico";
+                        $sql = "SELECT Nome, CRM, Especialidade, Telefone, Email FROM medico";
                         $stmt = $pdo->query($sql);
 
                         while ($row = $stmt->fetch()) {
