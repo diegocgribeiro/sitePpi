@@ -41,7 +41,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    require "../php/conexaoMysql.php";
+                    require "./conexaoMysql.php";
                     $pdo = mysqlConnect();
                     try {
                         $sql = "SELECT Nome, CRM, Especialidade, Telefone, Email FROM Medico";
