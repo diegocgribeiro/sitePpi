@@ -35,7 +35,6 @@
                         <th>Nome</th>
                         <th>CRM</th>
                         <th>Especialidade</th>
-                        <th>Telefone</th>
                         <th>E-mail</th>
                     </tr>
                 </thead>
@@ -44,14 +43,13 @@
                     require "../sql/conexaoMysql.php";
                     $pdo = mysqlConnect();
                     try {
-                        $sql = "SELECT nomeMed, CRM, especialidade, telefone, email FROM medico";
+                        $sql = "SELECT nomeMed, CRM, especialidade, email FROM medico";
                         $stmt = $pdo->query($sql);
 
                         while ($row = $stmt->fetch()) {
                             $Nome = htmlspecialchars($row['Nome']);
                             $CRM = htmlspecialchars($row['CRM']);
                             $Especialidade = htmlspecialchars($row['Especialidade']);
-                            $Telefone = htmlspecialchars($row['Telefone']);
                             $Email = htmlspecialchars($row['Email']);
 
                             echo <<<HTML
@@ -59,7 +57,6 @@
                                 <td>$Nome</td>
                                 <td>$CRM</td>
                                 <td>$Especialidade</td>
-                                <td>$Telefone</td>
                                 <td>$Email</td>
                             </tr>
                             HTML;
