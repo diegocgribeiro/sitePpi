@@ -130,12 +130,10 @@ div>h3.central {
         display: block;
     }
 
-    footer {
-        background-color: #384734;
+    footer{
+        margin-top: 50px;
         height: auto;
-        bottom: 0;
-        width: 100%;
-
+        
     }
 
 }
@@ -148,9 +146,10 @@ div>h3.central {
 footer{
     background-color: #384734;
     height: auto;
+    position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    
 }
 
 .titulo-galeria {
