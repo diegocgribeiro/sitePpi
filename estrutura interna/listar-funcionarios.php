@@ -35,38 +35,40 @@
             <table class="tabela">
                 <thead>
                     <tr>
+                        <th>Codigo</th>
                         <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Cargo</th>
-                        <th>Telefone</th>
-                        <th>E-mail</th>
+                        <th>Email</th>
+                        <th>SenhaHash</th>
+                        <th>Estado Civil</th>
+                        <th>Data de Nascimento</th>
+                        <th>Funcao</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    require "../php/conexaoMysql.php";
+                    require "../sql/conexaoMysql.php";
                     $pdo = mysqlConnect();
                     try {
-                        $sql = "SELECT Nome, CPF, DataNascimento, EstadoCivil, Cargo, Telefone, Email FROM Funcionario";
+                        $sql = "SELECT codigo, nome, email, senhahash, estadocivil, datanascimento, funcao FROM funcionario";
                         $stmt = $pdo->query($sql);
                         while ($row = $stmt->fetch()) {
-                            $Nome = htmlspecialchars($row['Nome']);
-                            $CPF = htmlspecialchars($row['CPF']);
-                            $DataNascimento = htmlspecialchars($row['DataNascimento']);
-                            $EstadoCivil = htmlspecialchars($row['EstadoCivil']);
-                            $Cargo = htmlspecialchars($row['Cargo']);
-                            $Telefone = htmlspecialchars($row['Telefone']);
-                            $Email = htmlspecialchars($row['Email']);
+                            $codigo = htmlspecialchars($row['codigo']);
+                            $nome = htmlspecialchars($row['nome']);
+                            $email = htmlspecialchars($row['email']);
+                            $senhahash = htmlspecialchars($row['senhahash']);
+                            $estadocivil = htmlspecialchars($row['estadocivil']);
+                            $datanascimento = htmlspecialchars($row['datanascimento']);
+                            $funcao = htmlspecialchars($row['funcao']);
 
                             echo <<<HTML
                             <tr>
-                                <td>$Nome</td>
-                                <td>$CPF</td>
-                                <td>$DataNascimento</td>
-                                <td>$EstadoCivil</td>
-                                <td>$Cargo</td>
-                                <td>$Telefone</td>
-                                <td>$Email</td>
+                                <td>$codigo</td>
+                                <td>$nome</td>
+                                <td>$email</td>
+                                <td>$senhahash</td>
+                                <td>$estadocivil</td>
+                                <td>$datanascimento</td>
+                                <td>$funcao</td>
                             </tr>
                             HTML;
                         }
