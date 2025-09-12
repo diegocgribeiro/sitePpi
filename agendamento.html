@@ -70,13 +70,11 @@
 
                 <div class="grupo-form">
                     <label for="select-especialidade">Especialidade:</label>
+
+
+
                     <select id="select-especialidade" name="select-especialidade" required>
                         <option value="">Selecione uma especialidade</option>
-                        <option value="Clinico geral">Clínico Geral</option>
-                        <option value="Dermatologia">Dermatologia</option>
-                        <option value="Cardiologia">Cardiologia</option>
-                        <option value="Pediatria">Pediatria</option>
-                        <option value="Ginecologia">Ginecologia</option>
                     </select>
                 </div>
 
@@ -103,12 +101,14 @@
                 </div>
 
                 <button type="submit" id="botao">Agendar Consulta</button>
-                <button type="button" id="buscar"><a id='buscar' href="buscar-agendamento.html">Buscar sua Consulta</a></button>
+                <button type="button" id="buscar"><a id='buscar' href="buscar-agendamento.html">Buscar sua
+                        Consulta</a></button>
+                
                 <p class="text-secondary">Após a confirmação de sua consulta, você receberá um e-mail com os detalhes
                 </p>
             </form>
         </section>
-        
+
     </main>
 
     <footer class=" text-white text-center p-3">
@@ -118,22 +118,59 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    
+
+    <script>
+
+
+        const selectEspecialidade = document.getElementById("select-especialidade");
+
+        async function buscaEspecialidade() {
+            selectEspecialidade.disabled = true;
+
+            try {
+                const response = await fetch('buscar-especialidade.php');
+
+                if (!response.ok) {
+                    throw new Error("Falha na rede: " + response.status);
+                }
+
+                const especialidadesDisponiveis = await response.json();                
+
+                selectEspecialidade.textContent = 'Selecione a especialidade';
+
+                especialidadesDisponiveis.forEach(item => {
+                    const option = document.createElement("option");
+                    option.textContent = item.especialidade;
+                    option.value = item.especialidade;
+                    selectEspecialidade.appendChild(option);
+                });
+
+                if (especialidadesDisponiveis.length > 0) {
+                    selectEspecialidade.disabled = false;
+                }
+
+            } catch (error) {
+                console.error("Erro ao buscar especialidades:", error);
+            }
+        }
+
+        selectEspecialidade.addEventListener('mouseenter', buscaEspecialidade);
+    </script>
+
+
     <script>
         const selecionaEspec = document.getElementById("select-especialidade");
         const medicoSelect = document.getElementById('select-medico');
 
         async function buscaMedico(especialidade) {
-            medicoSelect.innerHTML = '<option value="">Carregando...</option>';
             medicoSelect.disabled = true;
 
             try {
                 if (!especialidade) {
-                    medicoSelect.innerHTML = '<option value="">Selecione uma especialidade</option>';
                     return;
                 }
 
-                const response = await fetch('buscar-medicos.php?especialidade='+ especialidade);
+                const response = await fetch('buscar-medicos.php?especialidade=' + especialidade);
 
                 if (!response.ok) {
                     throw new Error("Falha inesperada: " + response.status);
@@ -146,7 +183,7 @@
                 medicos.forEach(medico => {
                     const option = document.createElement("option");
                     option.setAttribute('name', 'nomeMed');
-                    option.textContent = medico.nomeMed; 
+                    option.textContent = medico.nomeMed;
                     medicoSelect.appendChild(option);
                 });
 

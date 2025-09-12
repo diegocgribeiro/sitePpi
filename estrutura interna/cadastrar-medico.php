@@ -5,16 +5,13 @@ $pdo = mysqlConnect();
 $nome = $_POST['nome'] ?? '';
 $crm = $_POST['crm'] ?? '';
 $especialidade = $_POST['especialidade'] ?? '';
-$telefone = $_POST['telefone'] ?? '';
-$email = $_POST['email'] ?? '';
-
 try {
 
-    $sql = "INSERT INTO medico (Nome, CRM, Especialidade, Telefone, Email)
-            VALUES (?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO medico (nomeMed, CRM, especialidade)
+            VALUES (?, ?, ?)";
     $pdo->beginTransaction();
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$nome, $crm, $especialidade, $telefone, $email]);
+    $stmt->execute([$nome, $crm, $especialidade]);
     $pdo->commit();
     header("Location: listar-medicos.php");
 } catch (Exception $e) {

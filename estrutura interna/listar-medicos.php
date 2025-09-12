@@ -25,6 +25,7 @@
         <a class="nav-link active" href="listar-medicos.php">Médicos</a>
         <a class="nav-link" href="listar-agendamentos.php">Agendamentos</a>
         <a class="nav-link" href="mostra-contato.php">Mensagens</a>
+        <a class="nav-link" href="../index.html">Sair</a>
     </nav>
     <main class="container mt-4">
         <h2 class="text-center mb-4">Médicos Cadastrados</h2>
@@ -35,7 +36,6 @@
                         <th>Nome</th>
                         <th>CRM</th>
                         <th>Especialidade</th>
-                        <th>E-mail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,21 +43,19 @@
                     require "../sql/conexaoMysql.php";
                     $pdo = mysqlConnect();
                     try {
-                        $sql = "SELECT nomeMed, CRM, especialidade, email FROM medico";
+                        $sql = "SELECT nomeMed, CRM, especialidade FROM medico";
                         $stmt = $pdo->query($sql);
 
                         while ($row = $stmt->fetch()) {
-                            $Nome = htmlspecialchars($row['Nome']);
+                            $Nome = htmlspecialchars($row['nomeMed']);
                             $CRM = htmlspecialchars($row['CRM']);
-                            $Especialidade = htmlspecialchars($row['Especialidade']);
-                            $Email = htmlspecialchars($row['Email']);
+                            $Especialidade = htmlspecialchars($row['especialidade']);
 
                             echo <<<HTML
                             <tr>
                                 <td>$Nome</td>
                                 <td>$CRM</td>
                                 <td>$Especialidade</td>
-                                <td>$Email</td>
                             </tr>
                             HTML;
                         }
