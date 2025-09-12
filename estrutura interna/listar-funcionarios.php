@@ -38,7 +38,6 @@
                         <th>Codigo</th>
                         <th>Nome</th>
                         <th>Email</th>
-                        <th>SenhaHash</th>
                         <th>Estado Civil</th>
                         <th>Data de Nascimento</th>
                         <th>Funcao</th>
@@ -65,7 +64,6 @@
                                 <td>$codigo</td>
                                 <td>$nome</td>
                                 <td>$email</td>
-                                <td>$senhahash</td>
                                 <td>$estadocivil</td>
                                 <td>$datanascimento</td>
                                 <td>$funcao</td>
